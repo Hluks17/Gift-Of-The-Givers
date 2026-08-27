@@ -1,0 +1,172 @@
+﻿@{
+    ViewData["Title"] = "About Us";
+}
+
+<div class="container mt-5">
+
+    <!-- Page Heading -->
+    <div class="text-center mb-5">
+
+        <h1 class="display-4 fw-bold text-success">
+            About Gift of the Givers
+        </h1>
+
+        <p class="lead">
+            Humanity. Compassion. Action.
+        </p>
+
+    </div>
+
+
+    <!-- Introduction -->
+    <div class="row align-items-center mb-5">
+
+        <div class="col-md-6">
+
+            <h2 class="text-success">
+                Who We Are
+            </h2>
+
+            <p>
+                Gift of the Givers is a humanitarian organisation
+                dedicated to providing assistance to communities
+                affected by disasters and difficult circumstances.
+            </p>
+
+            <p>
+                Through humanitarian relief, disaster response and
+                community support, the organisation works to provide
+                essential assistance to people who need it most.
+            </p>
+
+        </div>
+
+
+        <div class="col-md-6">
+
+            <div class="card shadow border-0">
+
+                <div class="card-body text-center p-5">
+
+                    <h3 class="text-success">
+                        Our Mission
+                    </h3>
+
+                    <p class="mt-3">
+                        To provide humanitarian assistance with
+                        compassion, efficiency and dignity.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- What We Do -->
+    <div class="text-center mb-4">
+
+        <h2 class="text-success">
+            What We Do
+        </h2>
+
+    </div>
+
+
+    <div class="row">
+
+        <!-- Disaster Relief -->
+        <div class="col-md-4 mb-4">
+
+            <div class="card shadow h-100">
+
+                <div class="card-body text-center p-4">
+
+                    <h3>Disaster Relief</h3>
+
+                    <p>
+                        Supporting communities affected by
+                        floods, fires and other emergencies.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Humanitarian Support -->
+        <div class="col-md-4 mb-4">
+
+            <div class="card shadow h-100">
+
+                <div class="card-body text-center p-4">
+
+                    <h3>Humanitarian Support</h3>
+
+                    <p>
+                        Providing essential supplies and
+                        assistance to vulnerable communities.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Volunteers -->
+        <div class="col-md-4 mb-4">
+
+            <div class="card shadow h-100">
+
+                <div class="card-body text-center p-4">
+
+                    <h3>Volunteers</h3>
+
+                    <p>
+                        Connecting people who want to help
+                        with humanitarian opportunities.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Call To Action -->
+    <div class="text-center mt-5 mb-5">
+
+        <h3>
+            Want to make a difference?
+        </h3>
+
+        <p>
+            You can support humanitarian efforts by making
+            a donation or registering as a volunteer.
+        </p>
+
+        <a asp-controller="Donation"
+           asp-action="Create"
+           class="btn btn-success me-2">
+            Donate Now
+        </a>
+
+        <a asp-controller="Volunteer"
+           asp-action="Register"
+           class="btn btn-outline-success">
+            Become a Volunteer
+        </a>
+
+    </div>
+
+</div>

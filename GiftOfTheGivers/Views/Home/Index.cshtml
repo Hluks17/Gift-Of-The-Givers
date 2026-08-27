@@ -1,0 +1,89 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="hero-section">
+    <div class="container text-center text-white">
+
+        <h1 class="display-3 fw-bold">
+            Gift of the Givers
+        </h1>
+
+        <p class="lead mt-3">
+            Humanity. Compassion. Action.
+        </p>
+
+        <p class="mt-3">
+            Supporting communities through disaster relief
+            and humanitarian assistance.
+        </p>
+
+        <div class="mt-4">
+            <a asp-controller="Donation"
+               asp-action="Create"
+               class="btn btn-light btn-lg me-2">
+                Donate Now
+            </a>
+
+            <a asp-controller="Volunteer"
+               asp-action="Register"
+               class="btn btn-outline-light btn-lg">
+                Become a Volunteer
+            </a>
+        </div>
+
+    </div>
+</div>
+
+<div class="container mt-5">
+
+    <div class="row text-center">
+
+        <div class="col-md-4 mb-4">
+            <div class="card shadow h-100">
+                <div class="card-body">
+
+                    <h3>Disaster Relief</h3>
+
+                    <p>
+                        Providing assistance to communities
+                        affected by disasters and emergencies.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card shadow h-100">
+                <div class="card-body">
+
+                    <h3>Humanitarian Aid</h3>
+
+                    <p>
+                        Supporting people in need with
+                        essential humanitarian assistance.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card shadow h-100">
+                <div class="card-body">
+
+                    <h3>Volunteer</h3>
+
+                    <p>
+                        Join our humanitarian efforts and
+                        help make a difference.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,61 @@
+﻿@{
+    ViewData["Title"] = "Registration Successful";
+}
+
+<div class="container mt-5 mb-5">
+
+    <div class="row justify-content-center">
+
+        <div class="col-lg-7">
+
+            <div class="card shadow border-0">
+
+                <div class="card-body text-center p-5">
+
+                    <div class="display-1 text-success mb-3">
+                        ✓
+                    </div>
+
+                    <h1 class="text-success fw-bold">
+                        Account Created!
+                    </h1>
+
+                    <p class="lead mt-3">
+                        Your registration has been completed
+                        successfully.
+                    </p>
+
+                    <p class="text-muted">
+                        In the final version, your account will
+                        be securely stored in the system database.
+                    </p>
+
+                    <div class="mt-4">
+
+                        <a asp-controller="Account"
+                           asp-action="Login"
+                           class="btn btn-success me-2">
+
+                            Login
+
+                        </a>
+
+                        <a asp-controller="Home"
+                           asp-action="Index"
+                           class="btn btn-outline-success">
+
+                            Return Home
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

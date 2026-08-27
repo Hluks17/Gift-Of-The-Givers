@@ -1,0 +1,57 @@
+﻿@{
+    ViewData["Title"] = "Message Sent";
+}
+
+<div class="container mt-5 mb-5">
+
+    <div class="row justify-content-center">
+
+        <div class="col-lg-7">
+
+            <div class="card shadow border-0">
+
+                <div class="card-body text-center p-5">
+
+                    <div class="display-1 text-success mb-3">
+                        ✓
+                    </div>
+
+                    <h1 class="text-success fw-bold">
+                        Message Sent Successfully
+                    </h1>
+
+                    <p class="lead mt-3">
+                        Thank you for contacting Gift of the Givers.
+                    </p>
+
+                    <p class="text-muted">
+                        Your message has been received in this
+                        prototype and will be reviewed by the
+                        relevant team.
+                    </p>
+
+                    <div class="mt-4">
+
+                        <a asp-controller="Home"
+                           asp-action="Index"
+                           class="btn btn-success me-2">
+                            Return Home
+                        </a>
+
+                        <a asp-controller="Home"
+                           asp-action="Contact"
+                           class="btn btn-outline-success">
+                            Send Another Message
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

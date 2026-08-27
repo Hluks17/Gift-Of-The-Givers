@@ -1,0 +1,117 @@
+﻿@model GiftOfTheGivers.Models.Donation
+
+@{
+    ViewData["Title"] = "Donation Confirmation";
+}
+
+<div class="container mt-5 mb-5">
+
+    <div class="row justify-content-center">
+
+        <div class="col-lg-8">
+
+            <div class="card shadow border-0">
+
+                <div class="card-body p-5 text-center">
+
+                    <div class="mb-4">
+
+                        <div class="display-1 text-success">
+                            ✓
+                        </div>
+
+                        <h1 class="text-success fw-bold">
+                            Thank You!
+                        </h1>
+
+                        <p class="lead">
+                            Your donation has been recorded
+                            in this prototype.
+                        </p>
+
+                    </div>
+
+
+                    <div class="card bg-light border-0 mb-4">
+
+                        <div class="card-body text-start">
+
+                            <h4 class="text-success mb-3">
+                                Donation Details
+                            </h4>
+
+                            <p>
+                                <strong>Donor:</strong>
+                                @Model.DonorName
+                            </p>
+
+                            <p>
+                                <strong>Email:</strong>
+                                @(string.IsNullOrWhiteSpace(Model.DonorEmail)
+                                                                ? "Not provided"
+                                                                : Model.DonorEmail)
+                            </p>
+
+                            <p>
+                                <strong>Amount:</strong>
+                                @Model.Currency @Model.Amount.ToString("N2")
+                            </p>
+
+                            <p>
+                                <strong>Donation Type:</strong>
+                                @Model.DonationType
+                            </p>
+
+                            <p>
+                                <strong>Date:</strong>
+                                @Model.DonationDate.ToString("dd MMMM yyyy HH:mm")
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="alert alert-info text-start">
+
+                        <strong>Tax Certificate:</strong>
+
+                        <p class="mb-0 mt-2">
+                            A placeholder tax certificate can be
+                            generated from this donation record.
+                            This prototype does not issue an
+                            official tax certificate.
+                        </p>
+
+                    </div>
+
+
+                    <div class="d-flex justify-content-center gap-2">
+
+                        <a asp-controller="Home"
+                           asp-action="Index"
+                           class="btn btn-success">
+
+                            Return Home
+
+                        </a>
+
+                        <a asp-controller="Donation"
+                           asp-action="Create"
+                           class="btn btn-outline-success">
+
+                            Make Another Donation
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

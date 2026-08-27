@@ -1,0 +1,141 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="container mt-5 mb-5">
+
+    <div class="text-center mb-5">
+
+        <h1 class="display-4 fw-bold text-success">
+            Welcome to Your Dashboard
+        </h1>
+
+        <p class="lead text-muted">
+            Manage your Gift of the Givers activities.
+        </p>
+
+    </div>
+
+
+    <div class="row g-4">
+
+        <!-- Donations -->
+        <div class="col-md-4">
+
+            <div class="card shadow border-0 h-100">
+
+                <div class="card-body text-center p-4">
+
+                    <div class="display-5 mb-3">
+                        💚
+                    </div>
+
+                    <h3 class="text-success">
+                        Donations
+                    </h3>
+
+                    <p class="text-muted">
+                        Make a donation and support
+                        humanitarian relief efforts.
+                    </p>
+
+                    <a asp-controller="Donation"
+                       asp-action="Create"
+                       class="btn btn-success">
+
+                        Donate
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Volunteer -->
+        <div class="col-md-4">
+
+            <div class="card shadow border-0 h-100">
+
+                <div class="card-body text-center p-4">
+
+                    <div class="display-5 mb-3">
+                        🤝
+                    </div>
+
+                    <h3 class="text-success">
+                        Volunteer
+                    </h3>
+
+                    <p class="text-muted">
+                        Register and participate in
+                        humanitarian activities.
+                    </p>
+
+                    <a asp-controller="Volunteer"
+                       asp-action="Register"
+                       class="btn btn-success">
+
+                        Volunteer
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Contact -->
+        <div class="col-md-4">
+
+            <div class="card shadow border-0 h-100">
+
+                <div class="card-body text-center p-4">
+
+                    <div class="display-5 mb-3">
+                        📞
+                    </div>
+
+                    <h3 class="text-success">
+                        Contact Us
+                    </h3>
+
+                    <p class="text-muted">
+                        Contact the organisation for
+                        assistance or enquiries.
+                    </p>
+
+                    <a asp-controller="Home"
+                       asp-action="Contact"
+                       class="btn btn-success">
+
+                        Contact Us
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="text-center mt-5">
+
+        <a asp-controller="Account"
+           asp-action="Logout"
+           class="btn btn-outline-danger">
+
+            Logout
+
+        </a>
+
+    </div>
+
+</div>

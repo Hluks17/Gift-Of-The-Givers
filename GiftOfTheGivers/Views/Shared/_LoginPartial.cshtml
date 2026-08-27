@@ -1,0 +1,40 @@
+﻿@if (User.Identity != null && User.Identity.IsAuthenticated)
+{
+    <div class="d-flex align-items-center">
+
+        <span class="text-white me-3">
+            Hello, @User.Identity.Name
+        </span>
+
+        <a asp-controller="Account"
+           asp-action="Logout"
+           class="btn btn-outline-light btn-sm">
+
+            Logout
+
+        </a>
+
+    </div>
+}
+else
+{
+    <div class="d-flex gap-2">
+
+        <a asp-controller="Account"
+           asp-action="Login"
+           class="btn btn-outline-light btn-sm">
+
+            Login
+
+        </a>
+
+        <a asp-controller="Account"
+           asp-action="Register"
+           class="btn btn-light btn-sm text-success">
+
+            Register
+
+        </a>
+
+    </div>
+}

@@ -1,0 +1,144 @@
+﻿@{
+    ViewData["Title"] = "Manage Volunteers";
+}
+
+<div class="container mt-5 mb-5">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+
+        <div>
+
+            <h1 class="text-success fw-bold">
+                Manage Volunteers
+            </h1>
+
+            <p class="text-muted">
+                View volunteers and their available skills.
+            </p>
+
+        </div>
+
+        <a asp-controller="Employee"
+           asp-action="Dashboard"
+           class="btn btn-outline-success">
+
+            ← Dashboard
+
+        </a>
+
+    </div>
+
+
+    <div class="card shadow border-0">
+
+        <div class="card-body p-4">
+
+            <div class="table-responsive">
+
+                <table class="table table-hover align-middle">
+
+                    <thead class="table-success">
+
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Skills</th>
+                            <th>Availability</th>
+                            <th>Status</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+
+                            <td class="fw-bold">
+                                Test Volunteer
+                            </td>
+
+                            <td>
+                                volunteer@test.com
+                            </td>
+
+                            <td>
+                                IT, Communication, Logistics
+                            </td>
+
+                            <td>
+                                Weekends
+                            </td>
+
+                            <td>
+                                <span class="badge bg-success">
+                                    Active
+                                </span>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td class="fw-bold">
+                                Thabo Molefe
+                            </td>
+
+                            <td>
+                                thabo@example.com
+                            </td>
+
+                            <td>
+                                Driving, Logistics
+                            </td>
+
+                            <td>
+                                Both
+                            </td>
+
+                            <td>
+                                <span class="badge bg-success">
+                                    Active
+                                </span>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td class="fw-bold">
+                                Lerato Nkosi
+                            </td>
+
+                            <td>
+                                lerato@example.com
+                            </td>
+
+                            <td>
+                                First Aid, Community Support
+                            </td>
+
+                            <td>
+                                Weekdays
+                            </td>
+
+                            <td>
+                                <span class="badge bg-success">
+                                    Active
+                                </span>
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,294 @@
+﻿@model GiftOfTheGivers.Models.ContactMessage
+
+@{
+    ViewData["Title"] = "Contact Us";
+}
+
+<div class="container mt-5 mb-5">
+
+    <!-- Page Header -->
+    <div class="text-center mb-5">
+
+        <h1 class="display-4 fw-bold text-success">
+            Contact Us
+        </h1>
+
+        <p class="lead text-muted">
+            We're here to help. Get in touch with Gift of the Givers.
+        </p>
+
+    </div>
+
+
+    <div class="row g-4">
+
+        <!-- Contact Information -->
+        <div class="col-lg-5">
+
+            <div class="card shadow border-0 h-100">
+
+                <div class="card-body p-4">
+
+                    <h2 class="text-success mb-4">
+                        Get In Touch
+                    </h2>
+
+                    <p class="text-muted">
+                        Whether you need humanitarian assistance,
+                        want to support our work, or would like
+                        more information, you can contact us using
+                        the information below.
+                    </p>
+
+
+                    <!-- Email -->
+                    <div class="d-flex mb-4">
+
+                        <div class="me-3">
+                            <span class="badge bg-success p-3">
+                                ✉
+                            </span>
+                        </div>
+
+                        <div>
+                            <h5 class="mb-1">
+                                Email
+                            </h5>
+
+                            <p class="mb-0 text-muted">
+                                info@giftofthegivers.org
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Phone -->
+                    <div class="d-flex mb-4">
+
+                        <div class="me-3">
+                            <span class="badge bg-success p-3">
+                                ☎
+                            </span>
+                        </div>
+
+                        <div>
+                            <h5 class="mb-1">
+                                Phone
+                            </h5>
+
+                            <p class="mb-0 text-muted">
+                                +27 11 000 0000
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Location -->
+                    <div class="d-flex mb-4">
+
+                        <div class="me-3">
+                            <span class="badge bg-success p-3">
+                                📍
+                            </span>
+                        </div>
+
+                        <div>
+                            <h5 class="mb-1">
+                                Location
+                            </h5>
+
+                            <p class="mb-0 text-muted">
+                                South Africa
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Hours -->
+                    <div class="d-flex">
+
+                        <div class="me-3">
+                            <span class="badge bg-success p-3">
+                                ⏰
+                            </span>
+                        </div>
+
+                        <div>
+                            <h5 class="mb-1">
+                                Office Hours
+                            </h5>
+
+                            <p class="mb-0 text-muted">
+                                Monday - Friday
+                                <br />
+                                08:00 - 17:00
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Contact Form -->
+        <div class="col-lg-7">
+
+            <div class="card shadow border-0">
+
+                <div class="card-body p-4">
+
+                    <h2 class="text-success mb-4">
+                        Send Us A Message
+                    </h2>
+
+                    <form asp-controller="Home"
+                          asp-action="Contact"
+                          method="post">
+
+                        <!-- Name -->
+                        <div class="mb-3">
+
+                            <label asp-for="Name"
+                                   class="form-label fw-bold">
+                                Full Name
+                            </label>
+
+                            <input asp-for="Name"
+                                   class="form-control"
+                                   placeholder="Enter your full name" />
+
+                            <span asp-validation-for="Name"
+                                  class="text-danger">
+                            </span>
+
+                        </div>
+
+
+                        <!-- Email -->
+                        <div class="mb-3">
+
+                            <label asp-for="Email"
+                                   class="form-label fw-bold">
+                                Email Address
+                            </label>
+
+                            <input asp-for="Email"
+                                   type="email"
+                                   class="form-control"
+                                   placeholder="example@email.com" />
+
+                            <span asp-validation-for="Email"
+                                  class="text-danger">
+                            </span>
+
+                        </div>
+
+
+                        <!-- Subject -->
+                        <div class="mb-3">
+
+                            <label asp-for="Subject"
+                                   class="form-label fw-bold">
+                                Subject
+                            </label>
+
+                            <select asp-for="Subject"
+                                    class="form-select">
+
+                                <option value="">
+                                    -- Select a subject --
+                                </option>
+
+                                <option value="Humanitarian Assistance">
+                                    Humanitarian Assistance
+                                </option>
+
+                                <option value="Donation">
+                                    Donation
+                                </option>
+
+                                <option value="Volunteer">
+                                    Volunteer
+                                </option>
+
+                                <option value="General Enquiry">
+                                    General Enquiry
+                                </option>
+
+                            </select>
+
+                            <span asp-validation-for="Subject"
+                                  class="text-danger">
+                            </span>
+
+                        </div>
+
+
+                        <!-- Message -->
+                        <div class="mb-4">
+
+                            <label asp-for="Message"
+                                   class="form-label fw-bold">
+                                Message
+                            </label>
+
+                            <textarea asp-for="Message"
+                                      class="form-control"
+                                      rows="6"
+                                      placeholder="Type your message here..."></textarea>
+
+                            <span asp-validation-for="Message"
+                                  class="text-danger">
+                            </span>
+
+                        </div>
+
+
+                        <!-- Submit -->
+                        <button type="submit"
+                                class="btn btn-success btn-lg w-100">
+
+                            Send Message
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Emergency Notice -->
+    <div class="alert alert-success mt-5">
+
+        <h4 class="alert-heading">
+            Humanitarian Assistance
+        </h4>
+
+        <p class="mb-0">
+            If you are contacting us regarding urgent humanitarian
+            assistance, please provide as much relevant information
+            as possible in your message.
+        </p>
+
+    </div>
+
+</div>
+
+
+@section Scripts
+{
+    <partial name="_ValidationScriptsPartial" />
+}

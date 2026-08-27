@@ -1,0 +1,205 @@
+﻿@model GiftOfTheGivers.Models.RegisterViewModel
+
+@{
+    ViewData["Title"] = "Register";
+}
+
+<div class="container mt-5 mb-5">
+
+    <div class="row justify-content-center">
+
+        <div class="col-md-7 col-lg-6">
+
+            <div class="card shadow border-0">
+
+                <div class="card-body p-4 p-md-5">
+
+                    <div class="text-center mb-4">
+
+                        <h1 class="text-success fw-bold">
+                            Create an Account
+                        </h1>
+
+                        <p class="text-muted">
+                            Join the Gift of the Givers community.
+                        </p>
+
+                    </div>
+
+
+                    <form asp-controller="Account"
+                          asp-action="Register"
+                          method="post">
+
+                        <!-- Full Name -->
+                        <div class="mb-3">
+
+                            <label asp-for="FullName"
+                                   class="form-label fw-bold">
+                                Full Name
+                            </label>
+
+                            <input asp-for="FullName"
+                                   class="form-control"
+                                   placeholder="Enter your full name" />
+
+                            <span asp-validation-for="FullName"
+                                  class="text-danger">
+                            </span>
+
+                        </div>
+
+
+                        <!-- Email -->
+                        <div class="mb-3">
+
+                            <label asp-for="Email"
+                                   class="form-label fw-bold">
+                                Email Address
+                            </label>
+
+                            <input asp-for="Email"
+                                   type="email"
+                                   class="form-control"
+                                   placeholder="example@email.com" />
+
+                            <span asp-validation-for="Email"
+                                  class="text-danger">
+                            </span>
+
+                        </div>
+
+
+                        <!-- Account Type -->
+                        <div class="mb-3">
+
+                            <label asp-for="AccountType"
+                                   class="form-label fw-bold">
+                                Account Type
+                            </label>
+
+                            <select asp-for="AccountType"
+                                    class="form-select">
+
+                                <option value="">
+                                    -- Select Account Type --
+                                </option>
+
+                                <option value="Donor">
+                                    Donor
+                                </option>
+
+                                <option value="Volunteer">
+                                    Volunteer
+                                </option>
+
+                            </select>
+
+                            <span asp-validation-for="AccountType"
+                                  class="text-danger">
+                            </span>
+
+                        </div>
+
+
+                        <!-- Password -->
+                        <div class="mb-3">
+
+                            <label asp-for="Password"
+                                   class="form-label fw-bold">
+                                Password
+                            </label>
+
+                            <input asp-for="Password"
+                                   type="password"
+                                   class="form-control"
+                                   placeholder="Create a password" />
+
+                            <span asp-validation-for="Password"
+                                  class="text-danger">
+                            </span>
+
+                            <div class="form-text">
+                                Password must contain at least
+                                6 characters.
+                            </div>
+
+                        </div>
+
+
+                        <!-- Confirm Password -->
+                        <div class="mb-4">
+
+                            <label asp-for="ConfirmPassword"
+                                   class="form-label fw-bold">
+                                Confirm Password
+                            </label>
+
+                            <input asp-for="ConfirmPassword"
+                                   type="password"
+                                   class="form-control"
+                                   placeholder="Confirm your password" />
+
+                            <span asp-validation-for="ConfirmPassword"
+                                  class="text-danger">
+                            </span>
+
+                        </div>
+
+
+                        <!-- Prototype Notice -->
+                        <div class="alert alert-info">
+
+                            <strong>Prototype Registration</strong>
+
+                            <p class="mb-0 mt-1">
+                                Your account details will be stored
+                                in the database when we complete the
+                                database section.
+                            </p>
+
+                        </div>
+
+
+                        <!-- Register -->
+                        <button type="submit"
+                                class="btn btn-success btn-lg w-100">
+
+                            Create Account
+
+                        </button>
+
+                    </form>
+
+
+                    <div class="text-center mt-4">
+
+                        <p class="mb-1">
+                            Already have an account?
+                        </p>
+
+                        <a asp-controller="Account"
+                           asp-action="Login"
+                           class="text-success fw-bold">
+
+                            Login here
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+@section Scripts
+{
+    <partial name="_ValidationScriptsPartial" />
+}

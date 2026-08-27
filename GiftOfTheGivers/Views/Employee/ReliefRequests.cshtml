@@ -1,0 +1,163 @@
+﻿@{
+    ViewData["Title"] = "Relief Requests";
+}
+
+<div class="container mt-5 mb-5">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+
+        <div>
+
+            <h1 class="text-success fw-bold">
+                Relief Requests
+            </h1>
+
+            <p class="text-muted">
+                Review and manage humanitarian assistance requests.
+            </p>
+
+        </div>
+
+        <a asp-controller="Employee"
+           asp-action="Dashboard"
+           class="btn btn-outline-success">
+
+            ← Dashboard
+
+        </a>
+
+    </div>
+
+
+    <div class="card shadow border-0">
+
+        <div class="card-body p-4">
+
+            <div class="table-responsive">
+
+                <table class="table table-hover align-middle">
+
+                    <thead class="table-success">
+
+                        <tr>
+                            <th>Request</th>
+                            <th>Location</th>
+                            <th>Category</th>
+                            <th>Date</th>
+                            <th>Priority</th>
+                            <th>Status</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>
+                                Emergency food assistance
+                            </td>
+
+                            <td>
+                                Gauteng
+                            </td>
+
+                            <td>
+                                Food
+                            </td>
+
+                            <td>
+                                Today
+                            </td>
+
+                            <td>
+                                <span class="badge bg-danger">
+                                    High
+                                </span>
+                            </td>
+
+                            <td>
+                                <span class="badge bg-warning text-dark">
+                                    Pending
+                                </span>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Water and sanitation support
+                            </td>
+
+                            <td>
+                                Limpopo
+                            </td>
+
+                            <td>
+                                Water
+                            </td>
+
+                            <td>
+                                Yesterday
+                            </td>
+
+                            <td>
+                                <span class="badge bg-warning text-dark">
+                                    Medium
+                                </span>
+                            </td>
+
+                            <td>
+                                <span class="badge bg-primary">
+                                    In Progress
+                                </span>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Emergency shelter assistance
+                            </td>
+
+                            <td>
+                                KwaZulu-Natal
+                            </td>
+
+                            <td>
+                                Shelter
+                            </td>
+
+                            <td>
+                                10 Aug 2026
+                            </td>
+
+                            <td>
+                                <span class="badge bg-danger">
+                                    High
+                                </span>
+                            </td>
+
+                            <td>
+                                <span class="badge bg-warning text-dark">
+                                    Pending
+                                </span>
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

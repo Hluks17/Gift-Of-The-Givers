@@ -1,0 +1,486 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8" />
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0" />
+
+    <title>
+        @ViewData["Title"] - Gift of the Givers
+    </title>
+
+
+    <!-- Bootstrap -->
+
+    <link rel="stylesheet"
+          href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+
+    <!-- Main Website CSS -->
+
+    <link rel="stylesheet"
+          href="~/css/site.css"
+          asp-append-version="true" />
+
+
+    <!-- Project CSS -->
+
+    <link rel="stylesheet"
+          href="~/GiftOfTheGivers.styles.css"
+          asp-append-version="true" />
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         NAVIGATION
+         ===================================================== -->
+
+    <header>
+
+        <nav class="navbar navbar-expand-lg navbar-dark">
+
+            <div class="container">
+
+
+                <!-- Website Logo / Name -->
+
+                <a class="navbar-brand d-flex align-items-center fw-bold"
+                   asp-area=""
+                   asp-controller="Home"
+                   asp-action="Index">
+
+                    <img src="~/images/logo.jpeg"
+                         alt="Gift of the Givers Logo"
+                         class="navbar-logo" />
+
+                    <span>
+                        Gift of the Givers
+                    </span>
+
+                </a>
+
+                <!-- Mobile Menu -->
+
+                <button class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#mainNavbar"
+                        aria-controls="mainNavbar"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
+
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+
+                <!-- Navigation Links -->
+
+                <div class="collapse navbar-collapse"
+                     id="mainNavbar">
+
+
+                    <ul class="navbar-nav me-auto">
+
+
+                        <!-- Home -->
+
+                        <li class="nav-item">
+
+                            <a class="nav-link"
+                               asp-area=""
+                               asp-controller="Home"
+                               asp-action="Index">
+
+                                Home
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- About -->
+
+                        <li class="nav-item">
+
+                            <a class="nav-link"
+                               asp-area=""
+                               asp-controller="Home"
+                               asp-action="About">
+
+                                About
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- Donate -->
+
+                        <li class="nav-item">
+
+                            <a class="nav-link"
+                               asp-area=""
+                               asp-controller="Donation"
+                               asp-action="Create">
+
+                                Donate
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- Volunteer -->
+
+                        <li class="nav-item">
+
+                            <a class="nav-link"
+                               asp-area=""
+                               asp-controller="Volunteer"
+                               asp-action="Register">
+
+                                Volunteer
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- Contact -->
+
+                        <li class="nav-item">
+
+                            <a class="nav-link"
+                               asp-area=""
+                               asp-controller="Home"
+                               asp-action="Contact">
+
+                                Contact
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- Employee Portal -->
+
+                        <li class="nav-item ms-lg-2">
+
+                            <a class="btn btn-light btn-sm fw-bold"
+                               asp-area=""
+                               asp-controller="Employee"
+                               asp-action="Login">
+
+                                Employee Portal
+
+                            </a>
+
+                        </li>
+
+
+                    </ul>
+
+
+                    <!-- Login / Register -->
+
+                    <partial name="_LoginPartial" />
+
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+         ===================================================== -->
+
+    <main role="main">
+
+        @RenderBody()
+
+    </main>
+
+
+
+    <!-- =====================================================
+      LARGE FOOTER
+      ===================================================== -->
+
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <div class="row g-5">
+
+                <!-- Logo / About -->
+
+                <div class="col-lg-4">
+
+                    <!-- LOGO -->
+
+                    <img src="~/images/logo.jpeg"
+                         alt="Gift of the Givers Logo"
+                         class="footer-logo-image" />
+
+                    <h4>
+                        Gift of the Givers
+                    </h4>
+
+                    <p>
+                        A humanitarian organisation focused on
+                        providing assistance to communities affected
+                        by disasters, poverty and humanitarian crises.
+                    </p>
+
+                    <p>
+                        Through donations, volunteers and community
+                        support, we work towards creating a positive
+                        impact where help is needed most.
+                    </p>
+
+                </div>
+
+
+
+                <!-- Quick Links -->
+
+                <div class="col-sm-6 col-lg-2">
+
+
+                    <h4>
+                        Quick Links
+                    </h4>
+
+
+                    <p>
+                        <a asp-controller="Home"
+                           asp-action="Index">
+
+                            Home
+
+                        </a>
+                    </p>
+
+
+                    <p>
+                        <a asp-controller="Home"
+                           asp-action="About">
+
+                            About Us
+
+                        </a>
+                    </p>
+
+
+                    <p>
+                        <a asp-controller="Donation"
+                           asp-action="Create">
+
+                            Donate
+
+                        </a>
+                    </p>
+
+
+                    <p>
+                        <a asp-controller="Volunteer"
+                           asp-action="Register">
+
+                            Volunteer
+
+                        </a>
+                    </p>
+
+
+                    <p>
+                        <a asp-controller="Home"
+                           asp-action="Contact">
+
+                            Contact Us
+
+                        </a>
+                    </p>
+
+                </div>
+
+
+
+                <!-- Support -->
+
+                <div class="col-sm-6 col-lg-3">
+
+
+                    <h4>
+                        Get Involved
+                    </h4>
+
+
+                    <p>
+
+                        <a asp-controller="Donation"
+                           asp-action="Create">
+
+                            Make a Donation
+
+                        </a>
+
+                    </p>
+
+
+                    <p>
+
+                        <a asp-controller="Volunteer"
+                           asp-action="Register">
+
+                            Become a Volunteer
+
+                        </a>
+
+                    </p>
+
+
+                    <p>
+
+                        <a asp-controller="Employee"
+                           asp-action="Login">
+
+                            Employee Portal
+
+                        </a>
+
+                    </p>
+
+
+                    <p>
+
+                        <a asp-controller="Home"
+                           asp-action="Contact">
+
+                            Request Assistance
+
+                        </a>
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- Contact -->
+
+                <div class="col-lg-3">
+
+
+                    <h4>
+                        Contact Us
+                    </h4>
+
+
+                    <p>
+
+                        <strong>Email</strong><br />
+
+                        info@giftofthegivers.org
+
+                    </p>
+
+
+                    <p>
+
+                        <strong>Phone</strong><br />
+
+                        +27 11 000 0000
+
+                    </p>
+
+
+                    <p>
+
+                        <strong>Office Hours</strong><br />
+
+                        Monday - Friday<br />
+
+                        08:00 - 17:00
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- Footer Bottom -->
+
+            <div class="footer-bottom">
+
+
+                <div class="row align-items-center">
+
+
+                    <div class="col-md-8">
+
+                        &copy; 2026 Gift of the Givers.
+                        All rights reserved.
+
+                    </div>
+
+
+                    <div class="col-md-4 text-md-end mt-2 mt-md-0">
+
+                        <a asp-controller="Home"
+                           asp-action="Privacy">
+
+                            Privacy Policy
+
+                        </a>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="~/js/site.js"
+            asp-append-version="true"></script>
+
+
+    @await RenderSectionAsync(
+    "Scripts",
+        required: false
+        )
+
+</body>
+
+</html>

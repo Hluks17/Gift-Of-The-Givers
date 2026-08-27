@@ -1,0 +1,93 @@
+﻿@model GiftOfTheGivers.Models.Volunteer
+
+@{
+    ViewData["Title"] = "Volunteer Registration Complete";
+}
+
+<div class="container mt-5 mb-5">
+
+    <div class="row justify-content-center">
+
+        <div class="col-lg-8">
+
+            <div class="card shadow border-0">
+
+                <div class="card-body p-5 text-center">
+
+                    <div class="display-1 text-success mb-3">
+                        ✓
+                    </div>
+
+                    <h1 class="text-success fw-bold">
+                        Thank You, @Model.Name!
+                    </h1>
+
+                    <p class="lead mt-3">
+                        Your volunteer registration has been received.
+                    </p>
+
+
+                    <div class="card bg-light border-0 mt-4 mb-4">
+
+                        <div class="card-body text-start">
+
+                            <h4 class="text-success mb-3">
+                                Registration Details
+                            </h4>
+
+                            <p>
+                                <strong>Name:</strong>
+                                @Model.Name
+                            </p>
+
+                            <p>
+                                <strong>Email:</strong>
+                                @Model.Email
+                            </p>
+
+                            <p>
+                                <strong>Skills:</strong>
+                                @Model.Skills
+                            </p>
+
+                            <p>
+                                <strong>Availability:</strong>
+                                @Model.Availability
+                            </p>
+
+                            <p>
+                                <strong>Date Registered:</strong>
+                                @Model.DateRegistered.ToString("dd MMMM yyyy HH:mm")
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="alert alert-info">
+
+                        An employee will be able to view your
+                        volunteer registration through the
+                        employee dashboard.
+
+                    </div>
+
+
+                    <a asp-controller="Home"
+                       asp-action="Index"
+                       class="btn btn-success">
+
+                        Return Home
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

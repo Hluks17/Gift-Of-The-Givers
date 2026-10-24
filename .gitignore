@@ -361,3 +361,24 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+# Ignore generated build output
+**/bin/
+**/obj/
+.vs/
+
+# Ignore local secrets and machine-specific settings
+**/local.settings.json
+**/*.user
+**/serviceDependencies.local.json
+**/profile.arm.json
+
+# Ignore generated build output
+**/bin/
+**/obj/
+.vs/
+
+# Ignore local secrets and machine-specific settings
+**/local.settings.json
+**/*.user
+**/serviceDependencies.local.json
+**/profile.arm.json
